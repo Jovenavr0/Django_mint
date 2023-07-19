@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    {% block add_meta_tags %}
+    {% endblock %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V89G802H31"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-V89G802H31');
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(90447083, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/90447083" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body class="text-center">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+  <style>
+  @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+  .bform {
+   font-family: "Montserrat", sans-serif;
+   color: #8d97ad;
+   font-weight: 300;
+   overflow: hidden;
+   position: relative;
+  }
+  
+  .bform h1,
+  .bform h2,
+  .bform h3,
+  .bform h4,
+  .bform h5,
+  .bform h6 {
+   color: #3e4555;
+  }
+  
+  .bform .subtitle {
+   color: #8d97ad;
+   line-height: 24px;
+  }
+  
+  .bform a {
+   text-decoration: none;
+  }
+  
+  .bform .btn-danger-gradiant {
+   background: #ff4d7e;
+   background: -webkit-linear-gradient(legacy-direction(to right), #ff4d7e 0%, #ff6a5b 100%);
+   background: -webkit-gradient(linear, left top, right top, from(#ff4d7e), to(#ff6a5b));
+   background: -webkit-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+   background: -o-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+   background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+  }
+  
+  .bform .btn-danger-gradiant:hover {
+   background: #ff6a5b;
+   background: -webkit-linear-gradient(legacy-direction(to right), #ff6a5b 0%, #ff4d7e 100%);
+   background: -webkit-gradient(linear, left top, right top, from(#ff6a5b), to(#ff4d7e));
+   background: -webkit-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+   background: -o-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+   background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
+  }
+  
+  .bform .btn-md {
+   padding: 15px 45px;
+   font-size: 16px;
+  }
+  
+  .bform .bg-facebook {
+   background-color: #3b5a9a;
+  }
+  
+  .bform .bg-twitter {
+   background-color: #56adf2;
+  }
+  
+  .bform .text-danger {
+   color: #ff4d7e !important;
+  }
+  
+  .bform .right-image {
+   background-position: center bottom;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   top: 0;
+  }
+  
+  @media (max-width: 1023px) {
+   .bform .contact-form {
+   padding-left: 0;
+   padding-right: 0;
+   }
+  }
+  
+  @media (max-width: 767px) {
+   .bform .contact-form {
+   padding-left: 15px;
+   padding-right: 15px;
+   }
+  }
+  
+  @media (max-width: 1023px) {
+   .bform .right-image {
+   position: relative;
+   bottom: -95px;
+   }
+  }
+  </style>
+  
+  <div class="bform py-5">
+   <!-- Row -->
+      <div class="row">
+   <div class="container d-flex justify-content-center">
+   <div class="col-lg-6 pr-4 pl-0 contact-form">
+   <div class="">
+   <h2 class="mb-3 font-weight-light">Get Register For Free</h2>
+   <h6 class="subtitle font-weight-normal">Lorem ipsum dolor sit amet, adipiscing.</h6>
+   <form class="mt-3">
+   <div class="row">
+   <div class="col-lg-12">
+   <div class="form-group">
+   <input class="form-control" type="text" placeholder="full name">
+   </div>
+   </div>
+   <div class="col-lg-12">
+   <div class="form-group">
+   <input class="form-control" type="email" placeholder="email address">
+   </div>
+   </div>
+   <div class="col-lg-6">
+   <div class="form-group">
+   <input class="form-control" type="password" placeholder="password">
+   </div>
+   </div>
+   <div class="col-lg-6">
+   <div class="form-group">
+   <input class="form-control" type="password" placeholder="confirm password">
+   </div>
+   </div>
+   <div class="col-lg-12">
+   <button type="submit" class="btn btn-md btn-block btn-danger-gradiant text-white border-0"><span> Create Account</span></button>
+   <!-- -->
+   </div>
+   </div>
+   </form>
+   <div class="row">
+   <div class="col-lg-12 text-center mt-4">
+   <h6 class="font-weight-normal">Signup with Social Accounts</h6>
+   <div class="row">
+   <div class="col-lg-6 col-md-6">
+   <a href="#" class="btn btn-block bg-facebook text-white mt-3">Facebook</a>
+   </div>
+   <div class="col-lg-6 col-md-6">
+   <a href="#" class="btn btn-block bg-twitter text-white mt-3">Twitter</a>
+   </div>
+   </div>
+   </div>
+   <div class="col-lg-12 text-center mt-4">
+   Already have an account? <a href="#" class="text-danger">Sign In</a>
+   </div>
+   </div>
+   </div>
+   </div>
+   </div>
+   </div>
+  </div>
+
+</body>
+</html>

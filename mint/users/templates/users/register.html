@@ -1,0 +1,145 @@
+{% extends 'registration/base_registration.html' %}
+{% load static %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+<main class="form-signin w-100 m-auto">
+    <form action="{% url 'register' %}" method="post">
+
+        <a href="/">
+            <img src="{% static 'users/img/logo_site.jpg' %}" class="mb-4"  width="249.6" height="85">
+        </a>
+
+        <h1 class="h3 mb-4 mt-2 fw-normal">Регистрация</h1>
+
+        <div class="form-floating">
+            <input
+            type="text"
+            name="username"
+            maxlength="150"
+            autocapitalize="none"
+            autocomplete="username"
+            autofocus required id="id_username"
+            class="
+            form-control
+            {% if 'username' in error %}
+            is-invalid
+            {% endif %}
+            "
+            placeholder="Login"
+            id="floatingInput">
+            <label for="id_username">Логин</label>
+            {% if 'username' in error %}
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Пользователь с таким именем уже создан!
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-floating">
+            <input
+            type="text"
+            name="email"
+            autocomplete="email"
+            maxlength="254"
+            required id="id_email"
+            class="form-control
+            {% if 'email' in error %}
+            is-invalid
+            {% endif %}
+            "
+            placeholder="Email"
+            id="floatingInput">
+            <label for="id_email">Адрес эл. почты</label>
+            {% if 'email' in error %}
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Введена некорректная почта!
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-floating">
+            <input
+            type="password"
+            name="password1"
+            autocomplete="new-password"
+            required id="id_password1"
+            class="form-control
+            {% if 'password2' in error %}
+            is-invalid
+            {% endif %}
+            "
+            placeholder="Password"
+            id="floatingInput">
+            <label for="id_password1">Пароль</label>
+            {% if 'password2' in error %}
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Пароли не совпадают, либо слишком слабые!
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-floating">
+            <input
+            type="password"
+            name="password2" 
+            autocomplete="new-password" 
+            required id="id_password2"
+            class="form-control
+            {% if 'password2' in error %}
+            is-invalid
+            {% endif %}
+            "
+            placeholder="Password" 
+            id="floatingInput">
+            <label for="id_password2">Подтверждение пароля</label>
+            {% if 'password2' in error %}
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Пароли не совпадают, либо слишком слабые!
+            </div>
+            {% endif %}
+        </div><br>
+
+          <div class="col-12">
+              <div class="form-check">
+                  <label class="form-check-label" for="invalidCheck">
+                    <input class="form-check-input ms-2" type="checkbox" value="" id="invalidCheck" required> Я прочитал
+                    <a href="{% url 'user_agreement' %}">Пользовательское соглашение</a> и согласен с
+                    <a href="{% url 'privacy_policy' %}">Политикой конфиденциальности</a>
+                  </label>
+                  <div class="invalid-feedback">
+                      Для продолжения, пожалуйста, установите этот флажок.
+                  </div>
+              </div>
+          </div><br>
+
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success mt-2 me-2">
+            Зарегистрироваться
+        </button>
+        <button class="btn btn-outline-secondary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            ?
+        </button>
+
+        <div class="collapse mt-3" id="collapseExample">
+            <div class="card card-body">
+                Логин не должен содержать пробелы, точки, запятые <br>
+                <hr>
+                Пароль должен быть надёжным и состаять минимум из 8 символов
+            </div>
+        </div>
+
+
+        <p class="mt-3">или</p>
+
+        <button type="button" class="btn btn-outline-primary" onclick="login_redirect();">Войти</button>
+        <script>
+        function login_redirect(){window.location = '{% url 'login' %}';}
+        </script>
+
+        <p class="mt-5 mb-3 text-muted">&copy; 2021–2023 ReLife</p>
+
+    </form>
+</main>
+{% endblock %}
