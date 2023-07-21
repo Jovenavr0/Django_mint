@@ -5,7 +5,7 @@ from django.views import View
 
 
 def personal_account(request):
-    return render(request, 'users/personalaccount.html')
+    return render(request, 'users/personal_account.html')
 
 class Register(View):
 
