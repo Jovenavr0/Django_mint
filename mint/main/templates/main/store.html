@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 
+{% load static %}
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -11,62 +13,62 @@
     <meta property="og:title" content="Магазин">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="static/main/main/img/store/background.png">
+    <meta property="og:image" content="{% static "main/img/store/background.png" %}">
     <link rel="canonical" href="store.html">
     <!--/metatextblock-->
     <meta property="fb:app_id" content="257953674358265">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-dns-prefetch-control" content="on">
-    <link rel="stylesheet" href="static/main/css/grid.css" type="text/css" media="all">
-    <link rel="stylesheet" href="static/main/css/main.css?t=1645377769" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "main/css/grid.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "main/css/main.css" %}?t=1645377769" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="static/main/css/css2?family=Ubuntu:wght@300;400;500;600;700&subset=latin,cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="static/main/css/animation.css" type="text/css" media="all">
-    <link rel="stylesheet" href="static/main/css/menusub.css" type="text/css" media="print" onload="this.media='all';">
+    <link href="{% static "main/css/css2" %}?family=Ubuntu:wght@300;400;500;600;700&subset=latin,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "main/css/animation.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "main/css/menusub.css" %}" type="text/css" media="print" onload="this.media='all';">
     <noscript>
-        <link rel="stylesheet" href="static/main/css/menusub.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{% static "main/css/menusub.css" %}" type="text/css" media="all">
     </noscript>
-    <link rel="stylesheet" href="static/main/css/cover.css" type="text/css" media="all">
-    <link rel="stylesheet" href="static/main/css/popup.css" type="text/css" media="print" onload="this.media='all';">
+    <link rel="stylesheet" href="{% static "main/css/cover.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "main/css/popup.css" %}" type="text/css" media="print" onload="this.media='all';">
     <noscript>
-        <link rel="stylesheet" href="static/main/css/popup.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{% static "main/css/popup.css" %}" type="text/css" media="all">
     </noscript>
-    <link rel="stylesheet" href="static/main/css/slds.css" type="text/css" media="print" onload="this.media='all';">
+    <link rel="stylesheet" href="{% static "main/css/slds.css" %}" type="text/css" media="print" onload="this.media='all';">
     <noscript>
-        <link rel="stylesheet" href="static/main/css/slds.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{% static "main/css/slds.css" %}" type="text/css" media="all">
     </noscript>
-    <link rel="stylesheet" href="static/main/css/zoom.css" type="text/css" media="print" onload="this.media='all';">
+    <link rel="stylesheet" href="{% static "main/css/zoom.css" %}" type="text/css" media="print" onload="this.media='all';">
     <noscript>
-        <link rel="stylesheet" href="static/main/css/zoom.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{% static "main/css/zoom.css" %}" type="text/css" media="all">
     </noscript>
-    <link rel="stylesheet" href="static/main/css/catalog.css" type="text/css" media="print" onload="this.media='all';">
+    <link rel="stylesheet" href="{% static "main/css/catalog.css" %}" type="text/css" media="print" onload="this.media='all';">
     <noscript>
-        <link rel="stylesheet" href="static/main/css/catalog.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{% static "main/css/catalog.css" %}" type="text/css" media="all">
     </noscript>
-    <link rel="stylesheet" href="static/main/css/forms.css" type="text/css" media="all">
-    <link rel="stylesheet" href="static/main/css/carousel.css" type="text/css" media="print" onload="this.media='all';">
+    <link rel="stylesheet" href="{% static "main/css/forms.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "main/css/carousel.css" %}" type="text/css" media="print" onload="this.media='all';">
     <noscript>
-        <link rel="stylesheet" href="static/main/css/carousel.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{% static "main/css/carousel.css" %}" type="text/css" media="all">
     </noscript>
     <link rel="stylesheet"
         href="linkrel=preconnecthref=https://fonts.googleapis.comlinkrel=preconnecthref=https://fonts.gstatic.comcrossoriginhttps://fonts.googleapis.com/css/css2?family=Rubik+Mono+One&display=swap"
         type="text/css">
-    <script src="static/main/js/jquery.js"></script>
-    <script src="static/main/js/scripts.js"></script>
-    <script src="static/main/js/main.js?t=1645377769"></script>
-    <script src="static/main/js/lazyload.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/animation.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/cover.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/events.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/menusub.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/hammer.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/slds.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/products.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/zoom.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/catalog.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/forms-2.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/cart.js" charset="utf-8" async=""></script>
-    <script src="static/main/js/video-processor.js" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/jquery.js" %}"></script>
+    <script src="{% static "main/js/scripts.js" %}"></script>
+    <script src="{% static "main/js/main.js" %}?t=1645377769"></script>
+    <script src="{% static "main/js/lazyload.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/animation.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/cover.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/events.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/menusub.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/slds.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/hammer.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/products.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/zoom.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/catalog.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/forms-2.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/cart.js" %}" charset="utf-8" async=""></script>
+    <script src="{% static "main/js/video-processor.js" %}" charset="utf-8" async=""></script>
     <script type="text/javascript">
         window.dataLayer = window.dataLayer || [];
     </script>
@@ -183,7 +185,7 @@
         </div>
         <div id="rec399508250" class="r t-rec" style=" " data-animationappear="off" data-record-type="674">
             <!-- T674 -->
-            <div class="t674"><img class="t674__img-holder" src="static/main/img/store/background.png">
+            <div class="t674"><img class="t674__img-holder" src="{% static "main/img/store/background.png" %}">
             </div>
             <style>
                 body {
@@ -313,7 +315,7 @@
             <div class="t-cover" id="recorddiv398254759" bgimgfield="img"
                 style="height:100vh; background-image:url('static/main/img/background/fonka.jpg');">
                 <div class="t-cover__carrier" id="coverCarry398254759" data-content-cover-id="398254759"
-                    data-content-cover-bg="static/main/img/background/fonka.jpg" data-content-cover-height="100vh"
+                    data-content-cover-bg="{% static "main/img/background/fonka.jpg" %}" data-content-cover-height="100vh"
                     data-content-cover-parallax="dynamic" data-content-video-url-youtube="ewWEz8o95LU"
                     style="height:100vh;background-attachment:scroll; background-position:center top;"></div>
                 <div class="t-cover__filter"
@@ -357,7 +359,7 @@
             <div class="t490">
                 <div class="t-container">
                     <div class="t490__col t-col t-col_4 t-prefix_4 t-align_center t-item"> <img
-                            src="static/main/img/store/1.png" class="t490__img t-img" imgfield="li_img__1476968722790"
+                        src="{% static "main/img/store/1.png" %}" class="t490__img t-img" imgfield="li_img__1476968722790"
                             style="width:200px;">
                         <div class="t490__wrappercenter "> </div>
                     </div>
@@ -425,7 +427,7 @@
                                             style="color:#ffffff;background-color:#000000;">NEW</div>
                                     </div>
                                     <div class="t754__bgimg t-bgimg js-product-img"
-                                        src="static/main/img/store/products/recommendation/1.png"
+                                        src="{% static "main/img/store/products/recommendation/1.png" %}"
                                         style="background-image:url('static/main/img/store/products/recommendation/1.png')"
                                         data-lazy-rule="comm:resize"></div>
                                 </div>
@@ -453,7 +455,7 @@
                                 <div class="t754__imgwrapper t1002__picture-wrapper "
                                     style="padding-bottom:97.222222222222%;">
                                     <div class="t754__bgimg t-bgimg js-product-img"
-                                        src="static/main/img/store/products/recommendation/2.png"
+                                        src="{% static "main/img/store/products/recommendation/2.png" %}"
                                         style="background-image:url('static/main/img/store/products/recommendation/2.png')"
                                         data-lazy-rule="comm:resize"></div>
                                 </div>
@@ -481,7 +483,7 @@
                                 <div class="t754__imgwrapper t1002__picture-wrapper "
                                     style="padding-bottom:97.222222222222%;">
                                     <div class="t754__bgimg t-bgimg js-product-img"
-                                        src="static/main/img/store/products/recommendation/3.png"
+                                        src="{% static "main/img/store/products/recommendation/3.png" %}"
                                         style="background-image:url('static/main/img/store/products/recommendation/3.png')"
                                         data-lazy-rule="comm:resize"></div>
                                 </div>
@@ -544,12 +546,12 @@
                                                         <div class="t-slds__wrapper" itemscope=""
                                                             itemtype="http://schema.org/ImageObject">
                                                             <meta itemprop="image"
-                                                                content="static/main/img/store/products/recommendation/1.png">
+                                                                content="{% static "main/img/store/products/recommendation/1.png" %}">
                                                             <div class="t-slds__imgwrapper" bgimgfield="gi_img__0"
                                                                 data-zoom-target="0" data-zoomable="yes"
-                                                                data-img-zoom-url="static/main/img/store/products/recommendation/1.png">
+                                                                data-img-zoom-url="{% static "main/img/store/products/recommendation/1.png" %}">
                                                                 <div class="t-slds__bgimg t-bgimg js-product-img"
-                                                                    data-original="static/main/img/store/products/recommendation/1.png"
+                                                                    data-original="{% static "main/img/store/products/recommendation/1.png" %}"
                                                                     style="padding-bottom:100%; background-image: url('static/main/img/store/products/recommendation/1.png');">
                                                                 </div>
                                                             </div>
@@ -604,12 +606,12 @@
                                                         <div class="t-slds__wrapper" itemscope=""
                                                             itemtype="http://schema.org/ImageObject">
                                                             <meta itemprop="image"
-                                                                content="static/main/img/store/products/recommendation/2.png">
+                                                                content="{% static "main/img/store/products/recommendation/2.png" %}">
                                                             <div class="t-slds__imgwrapper" bgimgfield="gi_img__0"
                                                                 data-zoom-target="0" data-zoomable="yes"
-                                                                data-img-zoom-url="static/main/img/store/products/recommendation/2.png">
+                                                                data-img-zoom-url="{% static "main/img/store/products/recommendation/2.png" %}">
                                                                 <div class="t-slds__bgimg t-bgimg js-product-img"
-                                                                    data-original="static/main/img/store/products/recommendation/2.png"
+                                                                    data-original="{% static "main/img/store/products/recommendation/2.png" %}"
                                                                     style="padding-bottom:100%; background-image: url('static/main/img/store/products/recommendation/2.png');">
                                                                 </div>
                                                             </div>
@@ -664,12 +666,12 @@
                                                         <div class="t-slds__wrapper" itemscope=""
                                                             itemtype="http://schema.org/ImageObject">
                                                             <meta itemprop="image"
-                                                                content="static/main/img/store/products/recommendation/3.png">
+                                                                content="{% static "main/img/store/products/recommendation/3.png" %}">
                                                             <div class="t-slds__imgwrapper" bgimgfield="gi_img__0"
                                                                 data-zoom-target="0" data-zoomable="yes"
-                                                                data-img-zoom-url="static/main/img/store/products/recommendation/3.png">
+                                                                data-img-zoom-url="{% static "main/img/store/products/recommendation/3.png" %}">
                                                                 <div class="t-slds__bgimg t-bgimg js-product-img"
-                                                                    data-original="static/main/img/store/products/recommendation/3.png"
+                                                                    data-original="{% static "main/img/store/products/recommendation/3.png" %}"
                                                                     style="padding-bottom:100%; background-image: url('static/main/img/store/products/recommendation/3.png');">
                                                                 </div>
                                                             </div>
@@ -734,7 +736,7 @@
             <!-- T492 -->
             <div class="t492">
                 <div class="t492__blockimgmobile t492__blockimgmobile_padding-0" style="display:none;"><img
-                        src="static/main/img/store/products/partners/sber/logo.png" class="t492__imgmobile t-img"></div>
+                    src="{% static "main/img/store/products/partners/sber/logo.png" %}" class="t492__imgmobile t-img"></div>
                 <table class="t492__blocktable" style="" data-height-correct-vh="yes">
                     <tr>
                         <td class="t492__blocktext">
@@ -747,7 +749,7 @@
                             </div>
                         </td>
                         <td class="t492__blockimg t-bgimg" bgimgfield="img"
-                            src="static/main/img/store/products/partners/sber/logo.png"
+                        src="{% static "main/img/store/products/partners/sber/logo.png" %}"
                             style="background-image:url('static/main/img/store/products/partners/sber/logo.png');">
                         </td>
                     </tr>
@@ -779,7 +781,7 @@
                                             style="color:#ffffff;background-color:#000000;">NEW</div>
                                     </div>
                                     <div class="t754__bgimg t-bgimg js-product-img"
-                                        src="static/main/img/store/products/partners/sber/1.png"
+                                        src="{% static "main/img/store/products/partners/sber/1.png" %}"
                                         style="background-image:url('static/main/img/store/products/partners/sber/1.png')"
                                         data-lazy-rule="comm:resize"></div>
                                 </div>
@@ -807,7 +809,7 @@
                                 <div class="t754__imgwrapper t1002__picture-wrapper "
                                     style="padding-bottom:97.222222222222%;">
                                     <div class="t754__bgimg t-bgimg js-product-img"
-                                        src="static/main/img/store/products/partners/sber/2.png"
+                                        src="{% static "main/img/store/products/partners/sber/2.png" %}"
                                         style="background-image:url('static/main/img/store/products/partners/sber/2.png')"
                                         data-lazy-rule="comm:resize"></div>
                                 </div>
@@ -835,7 +837,7 @@
                                 <div class="t754__imgwrapper t1002__picture-wrapper "
                                     style="padding-bottom:97.222222222222%;">
                                     <div class="t754__bgimg t-bgimg js-product-img"
-                                        src="static/main/img/store/products/partners/sber/3.png"
+                                        src="{% static "main/img/store/products/partners/sber/3.png" %}"
                                         style="background-image:url('static/main/img/store/products/partners/sber/3.png')"
                                         data-lazy-rule="comm:resize"></div>
                                 </div>
@@ -898,12 +900,12 @@
                                                         <div class="t-slds__wrapper" itemscope=""
                                                             itemtype="http://schema.org/ImageObject">
                                                             <meta itemprop="image"
-                                                                content="static/main/img/store/products/partners/sber/1.png">
+                                                                content="{% static "main/img/store/products/partners/sber/1.png" %}">
                                                             <div class="t-slds__imgwrapper" bgimgfield="gi_img__0"
                                                                 data-zoom-target="0" data-zoomable="yes"
-                                                                data-img-zoom-url="static/main/img/store/products/partners/sber/1.png">
+                                                                data-img-zoom-url="{% static "main/img/store/products/partners/sber/1.png" %}">
                                                                 <div class="t-slds__bgimg t-bgimg js-product-img"
-                                                                    data-original="static/main/img/store/products/partners/sber/1.png"
+                                                                    data-original="{% static "main/img/store/products/partners/sber/1.png" %}"
                                                                     style="padding-bottom:100%; background-image: url('static/main/img/store/products/partners/sber/1.png');">
                                                                 </div>
                                                             </div>
@@ -958,12 +960,12 @@
                                                         <div class="t-slds__wrapper" itemscope=""
                                                             itemtype="http://schema.org/ImageObject">
                                                             <meta itemprop="image"
-                                                                content="static/main/store/products/partners/sber/2.png">
+                                                                content="{% static "main/img/store/products/partners/sber/2.png" %}">
                                                             <div class="t-slds__imgwrapper" bgimgfield="gi_img__0"
                                                                 data-zoom-target="0" data-zoomable="yes"
-                                                                data-img-zoom-url="static/main/img/store/products/partners/sber/2.png">
+                                                                data-img-zoom-url="{% static "main/img/store/products/partners/sber/2.png" %}">
                                                                 <div class="t-slds__bgimg t-bgimg js-product-img"
-                                                                    data-original="static/main/img/store/products/partners/sber/2.png"
+                                                                    data-original="{% static "main/img/store/products/partners/sber/2.png" %}"
                                                                     style="padding-bottom:100%; background-image: url('static/main/img/store/products/partners/sber/2.png');">
                                                                 </div>
                                                             </div>
@@ -1018,12 +1020,12 @@
                                                         <div class="t-slds__wrapper" itemscope=""
                                                             itemtype="http://schema.org/ImageObject">
                                                             <meta itemprop="image"
-                                                                content="static/main/img/store/products/partners/sber/3.png">
+                                                                content="{% static "main/img/store/products/partners/sber/3.png" %}">
                                                             <div class="t-slds__imgwrapper" bgimgfield="gi_img__0"
                                                                 data-zoom-target="0" data-zoomable="yes"
-                                                                data-img-zoom-url="static/main/img/store/products/partners/sber/3.png">
+                                                                data-img-zoom-url="{% static "main/img/store/products/partners/sber/3.png" %}">
                                                                 <div class="t-slds__bgimg t-bgimg js-product-img"
-                                                                    data-original="static/main/img/store/products/partners/sber/3.png"
+                                                                    data-original="{% static "main/img/store/products/partners/sber/3.png" %}"
                                                                     style="padding-bottom:100%; background-image: url('static/main/img/store/products/partners/sber/3.png');">
                                                                 </div>
                                                             </div>
