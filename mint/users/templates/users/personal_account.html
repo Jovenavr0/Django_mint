@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="{% static "users/images/favicon.ico" %}">
   
   <link rel="stylesheet" href="{% static "users/css/header/main.css" %}" type="text/css" media="all" />
-  
+  <script src="{% static "users/js/header/main.js" %}" ></script>
 </head>
 
 <body>
@@ -49,14 +49,14 @@
             <a class="navlist_iteamall" href="index.htm"> Выйти </a>
           </li>
         </ul>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="javascript:void(0);" class="icon" onclick="burger()">
           <div class="b1"></div>
           <div class="b1"></div>
           <div class="b1"></div>
         </a>
       </div>
     </div>
-    <div id="ad" class="adaptive">
+    <div id="header_mint" class="adaptive">
       <a class="navlist_iteamall_adaptive" href="index.htm#About_us"> О нас </a>
       <a class="navlist_iteamall_adaptive" href="index.htm"> Главная </a>
       <a class="navlist_iteamall_adaptive" href="store.html"> Магазин </a>
@@ -149,12 +149,7 @@
       </div>
     </div>
     <!-- partial -->
-    <style>
-      .fix{
-        margin-top: 0px;
-      }
-    </style>
-    <div class="page-content-wrapper fix">
+    <div class="page-content-wrapper">
       <div class="page-content-wrapper-inner">
         <div class="content-viewport">
           <div class="row">

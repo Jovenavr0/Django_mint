@@ -383,7 +383,7 @@ footer {
       width: 100%;
       min-height: 100vh;
       padding: 1.5rem 2.5rem calc(90px + 1.5rem);
-      margin-top: 65px; }
+      margin-top: 0px; }
       .page-body .page-content-wrapper .page-content-wrapper-inner {
         max-width: 1140px;
         margin-left: auto;
@@ -391,7 +391,7 @@ footer {
         .page-body .page-content-wrapper .page-content-wrapper-inner .viewport-header {
           position: -webkit-sticky;
           position: sticky;
-          top: 65px;
+          top: 0px;
           background: #fbfcfd;
           z-index: 99; }
           .page-body .page-content-wrapper .page-content-wrapper-inner .viewport-header .breadcrumb {
