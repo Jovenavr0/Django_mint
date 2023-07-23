@@ -27,7 +27,7 @@
 
 <body>
   <!-- partial:partials/_header.html -->
-  <div id="nav" class="navbar">
+  <div id="nav" class="navbar_mint">
     <div class="maincontainer">
       <div class="leftwrapper" style="min-width: 90px; width: 90px;">
         <div class="logo_title">
@@ -36,17 +36,17 @@
       </div>
       <div class="rightwrapper">
         <ul class="navlist">
+          <li class="navlist_iteam" style="padding:0 15px;">
+            <a class="navlist_iteamall" href="{% url 'home' %}"> Главная </a>
+          </li>
+          <li class="navlist_iteam" style="padding:0 15px;">
+            <a class="navlist_iteamall" href="{% url 'store' %}"> Магазин </a>
+          </li>
           <li class="navlist_iteam" style="padding:0 15px 0 0;">
-            <a class="navlist_iteamall" href="index.htm#About_us"> О нас </a>
-          </li>
-          <li class="navlist_iteam" style="padding:0 15px;">
-            <a class="navlist_iteamall" href="index.htm"> Главная </a>
-          </li>
-          <li class="navlist_iteam" style="padding:0 15px;">
-            <a class="navlist_iteamall" href="store.html"> Магазин </a>
+            <a class="navlist_iteamall" href="{% url 'home' %}#About_us"> О нас </a>
           </li>
           <li class="navlist_iteam" style="padding:0 0 0 15px;">
-            <a class="navlist_iteamall" href="index.htm"> Выйти </a>
+            <a class="navlist_iteamall" href="{% url 'logout' %}"> Выйти </a>
           </li>
         </ul>
         <a href="javascript:void(0);" class="icon" onclick="burger()">
@@ -73,9 +73,10 @@
             alt="profile image">
         </div>
         <div class="info-wrapper">
-          <p class="user-name">Allen Clerk</p>
+          <p class="user-name"> {{ user.username }} </p>
+          <p class="user-email"> {{ user.email }} </p>
           <h6 class="display-income">$3,400,00</h6>
-        </div>
+        </div>  
       </div>
       <ul class="navigation-menu">
         <li class="nav-category-divider">MAIN</li>
@@ -142,11 +143,6 @@
           </a>
         </li>
       </ul>
-      <div class="sidebar-upgrade-banner">
-        <p class="text-gray">Upgrade to <b class="text-primary">PRO</b> for more exciting features</p>
-        <a class="btn upgrade-btn" target="_blank"
-          href="http://www.uxcandy.co/product/label-pro-admin-template/">Upgrade to PRO</a>
-      </div>
     </div>
     <!-- partial -->
     <div class="page-content-wrapper">

@@ -21,9 +21,9 @@
     text-align: center;
 
     .user-name {
-      font-weight: 600;
+      font-weight: 800;
       @include ms-respond(font-size, 1);
-      margin-top: 25px;
+      margin-top: 10px;
     }
 
     .display-income {

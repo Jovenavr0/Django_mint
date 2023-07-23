@@ -1,11 +1,17 @@
 from users.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views import View
 
 
+@login_required
 def personal_account(request):
     return render(request, 'users/personal_account.html')
+
+
+def report(request):
+    return render(request, 'users/report.html')
 
 class Register(View):
 

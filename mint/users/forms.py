@@ -2,6 +2,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
 from django import forms
 from django.utils.translation import gettext_lazy as _
+
+from .models import Task
+from django.forms import ModelForm, TextInput, Textarea
  
 User = get_user_model()
 
@@ -17,3 +20,19 @@ class UserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model =  User
         fields = ("username", "email")
+
+
+class TaskForm(ModelForm):
+    class Meta:
+        model = Task
+        fields = ["title", "task"]
+        widgets = {
+            "title": TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Ведите название',
+            }),
+            "task": Textarea(attrs={
+            'class': 'form-control',
+            'placeholder': 'Ведите описание',
+            }),
+        }

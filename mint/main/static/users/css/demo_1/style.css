@@ -197,7 +197,11 @@
     text-align: center; }
     .sidebar .user-profile .user-name {
       font-weight: 600;
-      margin-top: 25px; }
+      margin-top: 6px; }
+    .sidebar .user-email {
+      font-weight: 600;
+      margin-top: 0px;
+    }
     .sidebar .user-profile .display-income {
       margin-top: 5px;
       color: rgba(16, 16, 16, 0.4); }

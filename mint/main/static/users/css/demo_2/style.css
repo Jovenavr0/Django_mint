@@ -8190,9 +8190,9 @@ textarea {
     flex-direction: column;
     text-align: center; }
     .sidebar .user-profile .user-name {
-      font-weight: 600;
+      font-weight: 800;
       font-size: 16px;
-      margin-top: 25px; }
+      margin-top: 10px; }
       @media (min-width: 768px) and (max-width: 991px) {
         .sidebar .user-profile .user-name {
           font-size: calc(16px + 1 * ((100vw - 768px) / 223)); } }
