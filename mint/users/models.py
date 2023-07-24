@@ -9,8 +9,9 @@ class User(AbstractUser):
 class Task(models.Model):
     title = models.CharField('Название', max_length=50)
     task = models.TextField('Описание')
-    
-    def str(self):
+    users = models.ManyToManyField(User)
+
+    def __str__(self):
         return self.title
 
     class Meta:

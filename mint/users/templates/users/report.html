@@ -57,12 +57,12 @@
     </div>
 
     <div class="container">
-
+    
         <h1> Создать task </h1>
-        <form method="post">
+        <form action="{% url 'report' %}" method="post" >
             {% csrf_token %}
-            {{ form.title }}<br>
-            {{ form.task }}<br>
+            {{ form.title }} <br>
+            {{ form.task }} <br>
             <button tupe="submit" class="btn btn-success">Добавить</button>
             <span>{{ error }}</span>
         </form>

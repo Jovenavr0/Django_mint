@@ -3,6 +3,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views import View
+from .models import Task
+from .forms import TaskForm
 
 
 @login_required
@@ -11,7 +13,21 @@ def personal_account(request):
 
 
 def report(request):
-    return render(request, 'users/report.html')
+    error = ''
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('personal_account')
+        else:
+            error = 'форма заполнена не корректно'
+
+    form = TaskForm()
+    context = {
+        'form': form,
+        'error': error,
+    }
+    return render(request, 'users/report.html', context)
 
 class Register(View):
 
