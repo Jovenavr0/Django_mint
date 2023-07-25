@@ -1,0 +1,4 @@
+*.mp4
+mint_env
+__pycache__
+.vscode

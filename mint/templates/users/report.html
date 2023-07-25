@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Mint report </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static "users/css/header/main.css" %}" type="text/css" media="all" />
+    <script src="{% static "users/js/header/main.js" %}"></script>
+
+</head>
+
+<body>
+    <div id="nav" class="navbar_mint">
+        <div class="maincontainer">
+            <div class="leftwrapper" style="min-width: 90px; width: 90px;">
+                <div class="logo_title">
+                    MINT личный кабинет
+                </div>
+            </div>
+            <div class="rightwrapper">
+                <ul class="navlist">
+                    <li class="navlist_iteam" style="padding:0 15px;">
+                        <a class="navlist_iteamall" href="{% url 'home' %}"> Главная </a>
+                    </li>
+                    <li class="navlist_iteam" style="padding:0 15px;">
+                        <a class="navlist_iteamall" href="{% url 'store' %}"> Магазин </a>
+                    </li>
+                    <li class="navlist_iteam" style="padding:0 15px 0 0;">
+                        <a class="navlist_iteamall" href="{% url 'home' %}#About_us"> О нас </a>
+                    </li>
+                    <li class="navlist_iteam" style="padding:0 0 0 15px;">
+                        <a class="navlist_iteamall" href="{% url 'logout' %}"> Выйти </a>
+                    </li>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="burger()">
+                    <div class="b1"></div>
+                    <div class="b1"></div>
+                    <div class="b1"></div>
+                </a>
+            </div>
+        </div>
+        <div id="header_mint" class="adaptive">
+            <a class="navlist_iteamall_adaptive" href="index.htm#About_us"> О нас </a>
+            <a class="navlist_iteamall_adaptive" href="index.htm"> Главная </a>
+            <a class="navlist_iteamall_adaptive" href="store.html"> Магазин </a>
+            <a class="navlist_iteamall_adaptive" href="index.htm"> Выйти </a>
+        </div>
+    </div>
+
+    <div class="container">
+    
+        <h1> Создать task </h1>
+        <form action="{% url 'report' %}" method="post" >
+            {% csrf_token %}
+            {{ form.title }} <br>
+            {{ form.task }} <br>
+            <button tupe="submit" class="btn btn-success">Добавить</button>
+            <span>{{ error }}</span>
+        </form>
+        
+    </div>
+
+
+</body>
+
+</html>
